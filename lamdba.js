@@ -36,7 +36,7 @@ exports.handler = function(event, context) {
                         "StateValue::" + message.OldStateValue + " -> " + message.NewStateValue + "\n" +
                         "NewStateReason::" + message.NewStateReason;
         
-            req.write(JSON.stringify({text: str}));
+            req.write(JSON.stringify({text: str, link_names: 1}));
     
             req.end();
         }
